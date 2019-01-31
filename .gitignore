@@ -25,3 +25,6 @@ runtime-1.8.8/
 logs/
 runtime-1.9/
 build/
+
+# language issues
+*.tmp

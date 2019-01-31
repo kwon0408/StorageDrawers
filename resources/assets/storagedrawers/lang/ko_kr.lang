@@ -1,108 +1,215 @@
-#author TeamMMKP(puyo061)
+#PARSE_ESCAPES
 
-itemGroup.storagedrawers=스토리지 드로워즈[Storage Drawers]
+itemGroup.storagedrawers=Storage Drawers
+itemGroup.storagedrawersSorting=Storage Drawers - Sorting
+
+storagedrawers.container.drawers=Drawers
+storagedrawers.container.compDrawers=Compacting Drawers
+storagedrawers.container.upgrades=Upgrades
+storagedrawers.container.drawer_controller=Drawer Controller
+storagedrawers.container.unboundSlave=Unbound Slave
+storagedrawers.container.framingTable=Framing Table
+
+storagedrawers.msg.maxUpgrades=This drawer cannot accept any more upgrades.
+storagedrawers.msg.cannotAddUpgrade=That upgrade cannot be installed in this drawer.
 
 # Items
-item.storagedrawers.upgradeTemplate.name=업데이트 견본
-item.storagedrawers.upgrade.obsidian.name=서랍 업그레이드 (I)
-item.storagedrawers.upgrade.iron.name=서랍 업그레이드 (II)
-item.storagedrawers.upgrade.gold.name=서랍 업그레이드 (III)
-item.storagedrawers.upgrade.diamond.name=서랍 업그레이드 (IV)
-item.storagedrawers.upgrade.emerald.name=서랍 업그레이드 (V)
-item.storagedrawers.upgradeStatus.level1.name=동상 업그레이드 (I)
-item.storagedrawers.upgradeStatus.level1.description=전제 스토리지 표시
-item.storagedrawers.upgradeStatus.level2.name=동상 업그레이드 (II)
-item.storagedrawers.upgradeStatus.level2.description=대부분의 스토리지 표시
-item.storagedrawers.upgradeStatus.level3.name=동상 업그레이드 (III)
-item.storagedrawers.upgradeStatus.level3.description=레벨 표시
-item.storagedrawers.upgradeLock.name=Lock Upgrade
-item.storagedrawers.upgradeLock.description=Keep associated items when empty
+item.storagedrawers.upgradeTemplate.name=Upgrade Template
+item.storagedrawers.upgradeStorage.obsidian.name=Storage Upgrade (I)
+item.storagedrawers.upgradeStorage.iron.name=Storage Upgrade (II)
+item.storagedrawers.upgradeStorage.gold.name=Storage Upgrade (III)
+item.storagedrawers.upgradeStorage.diamond.name=Storage Upgrade (IV)
+item.storagedrawers.upgradeStorage.emerald.name=Storage Upgrade (V)
+item.storagedrawers.upgradeOneStack.name=Storage Downgrade
+item.storagedrawers.upgradeOneStack.description=Reduces base storage to a single stack
+item.storagedrawers.upgradeStatus.level1.name=Status Upgrade (I)
+item.storagedrawers.upgradeStatus.level1.description=Shows full storage
+item.storagedrawers.upgradeStatus.level2.name=Status Upgrade (II)
+item.storagedrawers.upgradeStatus.level2.description=Shows fill level
+item.storagedrawers.upgradeVoid.name=Void Upgrade
+item.storagedrawers.upgradeVoid.description=Destroys excess items
+item.storagedrawers.upgradeConversion.name=Conversion Upgrade
+item.storagedrawers.upgradeConversion.description=Auto-converts compatible items
+item.storagedrawers.upgradeCreative.store.name=Creative Storage Upgrade
+item.storagedrawers.upgradeCreative.store.description=Near-infinite storage
+item.storagedrawers.upgradeCreative.vend.name=Creative Vending Upgrade
+item.storagedrawers.upgradeCreative.vend.description=Unlimited item withdrawal
+item.storagedrawers.upgradeRedstone.combined.name=Redstone Upgrade
+item.storagedrawers.upgradeRedstone.combined.description=Emits signal for total storage.
+item.storagedrawers.upgradeRedstone.max.name=Redstone Max Upgrade
+item.storagedrawers.upgradeRedstone.max.description=Emits signal for most full slot.
+item.storagedrawers.upgradeRedstone.min.name=Redstone Min Upgrade
+item.storagedrawers.upgradeRedstone.min.description=Emits signal for least full slot.
+item.storagedrawers.drawerKey.name=Drawer Key
+item.storagedrawers.drawerKey.description=Locks and unlocks drawers\nHold in off-hand to lock newly-placed drawers
+item.storagedrawers.shroudKey.name=Concealment Key
+item.storagedrawers.shroudKey.description=Show or hide item labels
+item.storagedrawers.quantifyKey.name=Quantify Key
+item.storagedrawers.quantifyKey.description=Show or hide stored quantity labels
+item.storagedrawers.personalKey.name=Personal Key
+item.storagedrawers.personalKey.description=Protect access from other players
+item.storagedrawers.tape.name=Packing Tape
+item.storagedrawers.tape.description=Seals drawers for moving
 
 # Blocks
-tile.storagedrawers.fullDrawers2.oak.name=참나무 서랍 1x2
-tile.storagedrawers.fullDrawers2.spruce.name=가문비나무 서랍 1x2
-tile.storagedrawers.fullDrawers2.birch.name=자작나무 서랍 1x2
-tile.storagedrawers.fullDrawers2.jungle.name=정글나무 서랍 1x2
-tile.storagedrawers.fullDrawers2.acacia.name=아카시아 서랍 1x2
-tile.storagedrawers.fullDrawers2.big_oak.name=짙은 참나무 참나무 서랍 1x2
+tile.storagedrawers.basicDrawers.fulldrawers1.name=Basic Drawer
+tile.storagedrawers.basicDrawers.fulldrawers2.name=Basic Drawers 1x2
+tile.storagedrawers.basicDrawers.fulldrawers4.name=Basic Drawers 2x2
+tile.storagedrawers.basicDrawers.halfdrawers2.name=Half Drawers 1x2
+tile.storagedrawers.basicDrawers.halfdrawers4.name=Half Drawers 2x2
 
-tile.storagedrawers.fullDrawers4.oak.name=참나무 서랍 2x2
-tile.storagedrawers.fullDrawers4.spruce.name=가문비나무 서랍 2x2
-tile.storagedrawers.fullDrawers4.birch.name=자작나무 서랍 2x2
-tile.storagedrawers.fullDrawers4.jungle.name=정글나무 서랍 2x2
-tile.storagedrawers.fullDrawers4.acacia.name=아카시아 서랍 2x2
-tile.storagedrawers.fullDrawers4.big_oak.name=짙은 참나무 참나무 서랍 2x2
+tile.storagedrawers.customDrawers.fulldrawers1.name=Framed Drawer
+tile.storagedrawers.customDrawers.fulldrawers2.name=Framed Drawers 1x2
+tile.storagedrawers.customDrawers.fulldrawers4.name=Framed Drawers 2x2
+tile.storagedrawers.customDrawers.halfdrawers2.name=Framed Half Drawers 1x2
+tile.storagedrawers.customDrawers.halfdrawers4.name=Framed Half Drawers 2x2
 
-tile.storagedrawers.halfDrawers2.oak.name=조밀한 참나무 서랍 1x2
-tile.storagedrawers.halfDrawers2.spruce.name=조밀한 가문비나무 서랍 1x2
-tile.storagedrawers.halfDrawers2.birch.name=조밀한 자작나무 서랍 1x2
-tile.storagedrawers.halfDrawers2.jungle.name=조밀한 정글나무 서랍 1x2
-tile.storagedrawers.halfDrawers2.acacia.name=조밀한 아카시아 서랍 1x2
-tile.storagedrawers.halfDrawers2.big_oak.name=조밀한 짙은 참나무 참나무 서랍 1x2
+tile.storagedrawers.fullCustom1.name=Framed Drawer
+tile.storagedrawers.fullCustom2.name=Framed Drawers 1x2
+tile.storagedrawers.fullCustom4.name=Framed Drawers 2x2
+tile.storagedrawers.halfCustom2.name=Framed Drawers 1x2
+tile.storagedrawers.halfCustom4.name=Framed Drawers 2x2
+tile.storagedrawers.customTrim.name=Framed Trim
 
-tile.storagedrawers.halfDrawers4.oak.name=조밀한 참나무 서랍 2x2
-tile.storagedrawers.halfDrawers4.spruce.name=조밀한 가문비나무 서랍 2x2
-tile.storagedrawers.halfDrawers4.birch.name=조밀한 자작나무 서랍 2x2
-tile.storagedrawers.halfDrawers4.jungle.name=조밀한 정글나무 서랍 2x2
-tile.storagedrawers.halfDrawers4.acacia.name=조밀한 아카시아 서랍 2x2
-tile.storagedrawers.halfDrawers4.big_oak.name=조밀한 짙은 참나무 참나무 서랍 2x2
+tile.storagedrawers.compDrawers.name=Compacting Drawer
+tile.storagedrawers.controller.name=Drawer Controller
+tile.storagedrawers.controllerSlave.name=Controller Slave
+tile.storagedrawers.framingTable.name=Framing Table
 
-tile.storagedrawers.compDrawers.name=압축 서랍
+tile.storagedrawers.trim.oak.name=Oak Trim
+tile.storagedrawers.trim.spruce.name=Spruce Trim
+tile.storagedrawers.trim.birch.name=Birch Trim
+tile.storagedrawers.trim.jungle.name=Jungle Trim
+tile.storagedrawers.trim.acacia.name=Acacia Trim
+tile.storagedrawers.trim.big_oak.name=Dark Oak Trim
 
-storagedrawers.drawers.description=서랍당 %d 스택을 보유 가능합니다.
-storagedrawers.upgrade.description=기준보다 %d배 더 많은 적제량
+tile.storagedrawers.keyButton.drawer.name=Drawer Key Button
+tile.storagedrawers.keyButton.concealment.name=Concealment Key Button
+tile.storagedrawers.keyButton.personal.name=Personal Key Button
+tile.storagedrawers.keyButton.quantify.name=Quantify Key Button
+
+storagedrawers.drawers.description=Holds %d stacks per drawer
+storagedrawers.drawers.sealed=Contents sealed within
+storagedrawers.upgrade.description=Increases storage to %d times base value
+storagedrawers.controller.description=Interact with a bank of connected drawers
+storagedrawers.controllerSlave.description=Extra attach points for controllers
+
+# Material
+storagedrawers.material=Material: %s
+storagedrawers.material.oak=Oak
+storagedrawers.material.spruce=Spruce
+storagedrawers.material.birch=Birch
+storagedrawers.material.jungle=Jungle
+storagedrawers.material.acacia=Acacia
+storagedrawers.material.dark_oak=Dark Oak
 
 # Integration
-storagedrawers.waila.empty=비어있음
-storagedrawers.waila.level=업그레이드 레벨: %s
-storagedrawers.waila.drawer=서랍 #%s: %s
+storagedrawers.waila.empty=<Empty>
+storagedrawers.waila.level=Upgrade Level: %s
+storagedrawers.waila.drawer=#%s: %s
+storagedrawers.waila.limit=Stack Limit: %s (x%s)
+storagedrawers.waila.nolimit=Stack Limit: ∞
 storagedrawers.waila.locked=Locked
+storagedrawers.waila.void=Void
+storagedrawers.waila.sorting=Sorting
+storagedrawers.waila.protected=Protected
+storagedrawers.waila.config.displayContents=Slot Contents
+storagedrawers.waila.config.displayStackLimit=Stack Limit
+storagedrawers.waila.config.displayStatus=Upgrade Status
 
 # Configuration
-storagedrawers.config.title=스토리지 드로워즈 설정
+storagedrawers.config.title=Storage Drawers Configuration
 
-storagedrawers.config.general=기본 설정
-storagedrawers.config.general.tooltip=이것 저것
+storagedrawers.config.general=General Settings
+storagedrawers.config.general.tooltip=This and that.
 
-storagedrawers.config.blocks=블록 설정
-storagedrawers.config.blocks.tooltip=개별 스토리지 설정
+storagedrawers.config.blocks=Block Settings
+storagedrawers.config.blocks.tooltip=Configure individual storage blocks.
 
-storagedrawers.config.blocks.fullDrawers2=서랍 1x2
-storagedrawers.config.blocks.fullDrawers4=서랍 2x2
-storagedrawers.config.blocks.halfDrawers2=압축서랍 1x2
-storagedrawers.config.blocks.halfDrawers4=압축서랍 2x2
-storagedrawers.config.blocks.compDrawers=압축서랍
+storagedrawers.config.blocks.fullDrawers1=Drawers 1x1
+storagedrawers.config.blocks.fullDrawers2=Drawers 1x2
+storagedrawers.config.blocks.fullDrawers4=Drawers 2x2
+storagedrawers.config.blocks.halfDrawers2=Compact Drawers 1x2
+storagedrawers.config.blocks.halfDrawers4=Compact Drawers 2x2
+storagedrawers.config.blocks.compDrawers=Compacting Drawer
+storagedrawers.config.blocks.controller=Drawer Controller
+storagedrawers.config.blocks.trim=Trim
+storagedrawers.config.blocks.controllerSlave=Controller Slave
 
-storagedrawers.config.upgrades=업그레이드 설정
-storagedrawers.config.upgrades.tooltip=스토리지 업그레이드 설정
+storagedrawers.config.upgrades=Upgrade Settings
+storagedrawers.config.upgrades.tooltip=Configure individual storage upgrades.
 
-storagedrawers.config.upgrades.level2Mult=스토리지 승수 (II)
-storagedrawers.config.upgrades.level3Mult=스토리지 승수 (III)
-storagedrawers.config.upgrades.level4Mult=스토리지 승수 (IV)
-storagedrawers.config.upgrades.level5Mult=스토리지 승수 (V)
-storagedrawers.config.upgrades.level6Mult=스토리지 승수 (VI)
+storagedrawers.config.upgrades.level2Mult=Storage Multiplier (II)
+storagedrawers.config.upgrades.level3Mult=Storage Multiplier (III)
+storagedrawers.config.upgrades.level4Mult=Storage Multiplier (IV)
+storagedrawers.config.upgrades.level5Mult=Storage Multiplier (V)
+storagedrawers.config.upgrades.level6Mult=Storage Multiplier (VI)
 
-storagedrawers.config.prop.itemRenderType=아이템 렌더 타입
-storagedrawers.config.prop.itemRenderType.tooltip=아이템을 3D혹은 평평하게 렌더링합니다
-storagedrawers.config.prop.enableIndicatorUpgrades=지표 업그레이드 활성화
-storagedrawers.config.prop.enableStorageUpgrades=스토리지 업그레이드 활성화
-storagedrawers.config.prop.enableLockUpgrades=Enable Lock Upgrade
-storagedrawers.config.prop.renderStorageUpgrades=스토리지 업그레이드 렌더링
-storagedrawers.config.prop.creativeTabVanillaWoods=크리에이티브탭 바닐라 나무
-storagedrawers.config.prop.creativeTabVanillaWoods.tooltip=크리에이티브탭을 바닐라나무로 설정합니다..
-storagedrawers.config.prop.enabled=활성화
-storagedrawers.config.prop.enabled.tooltip=인게임 블럭 활성화
-storagedrawers.config.prop.baseStorage=베이스 스토리지
-storagedrawers.config.prop.baseStorage.tooltip=서랍에 저장되어있는 스택을 표시
-storagedrawers.config.prop.recipeOutput=레시피 출력
-storagedrawers.config.prop.recipeOutput.tooltip=단독제작시 아이템 갯수 표기
+storagedrawers.config.prop.enableIndicatorUpgrades=Enable Indicator Upgrades
+storagedrawers.config.prop.enableStorageUpgrades=Enable Storage Upgrades
+storagedrawers.config.prop.enableLockUpgrades=Enable Drawer Locking
+storagedrawers.config.prop.enableShroudUpgrades=Enable Item Concealing
+storageDrawers.config.prop.enableQuantifiableUpgrades=Enable Quantity Display
+storagedrawers.config.prop.enablePersonalUpgrades=Enable Access Protection
+storagedrawers.config.prop.enableVoidUpgrades=Enable Void Upgrade
+storagedrawers.config.prop.enableCreativeUpgrades=Enable Creative Upgrade
+storagedrawers.config.prop.enableRedstoneUpgrades=Enable Redstone Upgrade
+storagedrawers.config.prop.enableSortingUpgrades=Enable Sorting Upgrade
+storagedrawers.config.prop.enableSortingUpgrades.tooltip=Refined Relocation must be loaded.
+storagedrawers.config.prop.renderStorageUpgrades=Render Storage Upgrades
+storagedrawers.config.prop.creativeTabVanillaWoods=Creative Tab Vanilla Woods
+storagedrawers.config.prop.creativeTabVanillaWoods.tooltip=Enable all vanilla wood styles on creative tab.
+storagedrawers.config.prop.enabled=Enabled
+storagedrawers.config.prop.enabled.tooltip=Enable block in game.
+storagedrawers.config.prop.baseStorage=Base Storage
+storagedrawers.config.prop.baseStorage.tooltip=Number of stacks held per drawer.
+storagedrawers.config.prop.recipeOutput=Recipe Output
+storagedrawers.config.prop.recipeOutput.tooltip=Number of items from single crafting.
+storagedrawers.config.prop.enableDrawerUI=Enable Drawer UI
+storagedrawers.config.prop.enableDrawerUI.tooltip=Shows item counts and provides upgrade management.
 storagedrawers.config.prop.enableSidedInput=Enable Sided Input
 storagedrawers.config.prop.enableSidedInput.tooltip=Other blocks can insert items into drawers.
 storagedrawers.config.prop.enableSidedOutput=Enable Sided Output
 storagedrawers.config.prop.enableSidedOutput.tooltip=Other blocks can extract items from drawers.
+storagedrawers.config.prop.enableItemConversion=Enable Item Conversion
+storagedrawers.config.prop.enableItemConversion.tooltip=Drawers auto-convert ore dictionary compatible items.
+storagedrawers.config.prop.enableFallbackRecipes=Enable Fallback Recipes
+storagedrawers.config.prop.enableFallbackRecipes.tooltip=Any valid plank wood can craft oak drawers.
+storagedrawers.config.prop.invertShift=Invert Sneak
+storagedrawers.config.prop.invertShift.tooltip=Inverts click and sneak+click behavior.
+storagedrawers.config.prop.enableDebugLogging=Enable Debug Logging
+storagedrawers.config.prop.enableDebugLogging.tooltip=Prints extra information to the logs.
+storagedrawers.config.prop.enableTape=Enable Tape
+storagedrawers.config.prop.enableTape.tooltip=For moving drawers with contents.
+storagedrawers.config.prop.wailaStackRemainder=WAILA amount presentation
+storagedrawers.config.prop.wailaStackRemainder.tooltip=How item amounts are displayed by WAILA.
+storagedrawers.config.prop.controllerRange=Controller Range
+storagedrawers.config.prop.controllerRange.tooltip=Range for detecting networked blocks.
+storagedrawers.config.prop.enableFramedDrawers=Enable Framed Drawers
+storagedrawers.config.prop.enableFramedDrawers.tooltip=Drawers with custom materials.
+storagedrawers.config.prop.defaultQuantify=Quantity Visible by Default
+storagedrawers.config.prop.defaultQuantify.tooltip=Drawers display quantity numbers when placed.
+
+storagedrawers.config.addons=Addons
+storagedrawers.config.addons.tooltip=Configure global addon pack settings.
+
+storagedrawers.config.addons.showNEI=Show Blocks in NEI
+storagedrawers.config.addons.showCreative=Show Blocks in Creative Tabs
+storagedrawers.config.addons.separateTabs=Separate Creative Tabs
+storagedrawers.config.addons.tooltip=Each pack uses its own tab instead of the Storage Drawers tab.
 
 storagedrawers.config.integration=Integration
 storagedrawers.config.integration.tooltip=Configure integration with other mods.
 
 storagedrawers.config.integration.enableAE2=Enable Applied Energistics 2 Integration
 storagedrawers.config.integration.enableWaila=Enable WAILA Integration
+storagedrawers.config.integration.enableThaumcraft=Enable Thaumcraft Integration
+storagedrawers.config.integration.enableMineTweaker=Enable MineTweaker Integration
+
+storagedrawers.config.registries=Registries
+storagedrawers.config.registries.tooltip=Configure compacting rules and ore dictionary substitution.
+
+storagedrawers.config.registries.compRules=Compacting Rules
+storagedrawers.config.registries.registerExtraCompRules=Register Extra Compacting Rules
+storagedrawers.config.registries.oreWhitelist=Ore Dictionary Whitelist
+storagedrawers.config.registries.oreBlacklist=Ore Dictionary Blacklist
